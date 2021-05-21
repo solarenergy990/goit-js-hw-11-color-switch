@@ -23,7 +23,7 @@ const onButtonStartClick = (evt) => {
   if (!evt.target.dataset.action === "start") {
     return;
   }
-  refs.buttonStart.removeEventListener("click", onButtonStartClick);
+  refs.buttonStart.removeEventListener("click", onButtonStartClick); // чи краще дизейблити кнопку "старт" за умовою isActive = true/false?
   timerId = setInterval(changeColors, 1000);
   console.log("button start was clicked");
 };
