@@ -35,7 +35,7 @@ const onButtonStopClick = () => {
 };
 
 const changeColors = () => {
-  let colorIndex = randomIntegerFromInterval(0, colors.length);
+  let colorIndex = randomIntegerFromInterval(0, colors.length - 1);
   console.log(colorIndex);
   refs.bodyContainer.style.backgroundColor = colors[colorIndex];
 };
