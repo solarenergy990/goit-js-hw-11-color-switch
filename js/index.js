@@ -6,7 +6,6 @@ const colors = [
   "#009688",
   "#795548",
 ];
-// console.log(colors.length);
 
 const refs = {
   buttonStart: document.querySelector('button[data-action="start"]'),
@@ -32,11 +31,11 @@ const onButtonStartClick = (evt) => {
 const onButtonStopClick = () => {
   refs.buttonStart.addEventListener("click", onButtonStartClick);
   clearInterval(timerId);
+  console.log("button stop was clicked");
 };
 
 const changeColors = () => {
   let colorIndex = randomIntegerFromInterval(0, colors.length - 1);
-  console.log(colorIndex);
   refs.bodyContainer.style.backgroundColor = colors[colorIndex];
 };
 
